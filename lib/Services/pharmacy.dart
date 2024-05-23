@@ -1,6 +1,4 @@
-import 'package:doctor_app/Common%20Widgets/button_style.dart';
 import 'package:flutter/material.dart';
-
 import 'package:url_launcher/url_launcher.dart';
 
 class MapScreen extends StatelessWidget {
@@ -9,63 +7,59 @@ class MapScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage("assets/images/Capssadture (1).png"),
-                fit: BoxFit.cover,
-              ),
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [
-                BoxShadow(
-                  color: Color.fromARGB(255, 4, 4, 4),
-                  spreadRadius: 2,
-                  blurRadius: 5,
-                  offset: Offset(0, 3),
-                ),
-              ],
-            ),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
             child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height * 0.6,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
+                image: DecorationImage(
+                  image: AssetImage("assets/images/Add a heading (29).png"),
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.1),
+                    spreadRadius: 4,
+                    blurRadius: 10,
+                    offset: Offset(0, 3),
+                  ),
+                ],
               ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
+              child: Stack(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Row(
-                      children: [
-                        IconButton(
-                          icon: Icon(
-                            Icons.arrow_back,
-                            color: Colors.black,
-                          ),
-                          onPressed: () => Navigator.pop(context),
-                        ),
-                        Text(
-                          'Find All Pharmacies Near You',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
+                  Positioned(
+                    top: 10,
+                    left: 10,
+                    child: IconButton(
+                      icon: Icon(
+                        Icons.arrow_back,
+                        color: const Color.fromARGB(255, 0, 0, 0),
+                      ),
+                      onPressed: () => Navigator.pop(context),
                     ),
                   ),
-                  Spacer(flex: 1),
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Center(
-                      child: Button_Style(
-                        onpressed: () {
-                          _openGoogleMaps();
-                        },
-                        title: "Tap to open Google Maps",
+                  Positioned(
+                    bottom: 1,
+                    left: 20,
+                    right: 20,
+                    child: ElevatedButton(
+                      onPressed: _openGoogleMaps,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 20, 93, 154),
+                        padding: EdgeInsets.symmetric(vertical: 16),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                      child: Text(
+                        "Find Nearby Pharmacies",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),

@@ -48,7 +48,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "heba": MessageLookupByLibrary.simpleMessage("د. هبة علي"),
         "hello": MessageLookupByLibrary.simpleMessage("👋 مرحبًا!"),
-        "home": MessageLookupByLibrary.simpleMessage("الصفحة الرئيسية"),
+        "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "kerolos": MessageLookupByLibrary.simpleMessage("د. كيرلس موريس"),
         "laila": MessageLookupByLibrary.simpleMessage("د. ليلى الشرقاوي"),
         "language": MessageLookupByLibrary.simpleMessage("العربية"),
