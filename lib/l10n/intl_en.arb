@@ -1,0 +1,43 @@
+{
+    "title_of_get_theBest":"Get the Best\nMedical Service",
+    "discreption_of_get_theBest" : "Get the best medical service for treating skin diseases .",
+    "hello": "👋 Hello!",
+    "search_medical" :  "Search Medical" ,  
+    "service" : "Services" ,
+    "doctor" : "Doctors" ,
+    "pharmacies" : "Pharmacies" ,
+    "report" : "Report",
+    "ai" : "A I",
+    "popular_Doctor" : "Popular Doctor",
+    "ahmed" : "Dr.Ahmed Ibrahim ",
+    "mohamed" : "Dr.Mohamed Fathy ",
+    "abdelrahman" : "Dr.Abdelrahman Mohamed",
+    "abanoub":"Dr.Abanoub Nabil",
+    "kerolos" :"Dr.kerolos Mores",               
+    "heba" :"Dr.Heba Ali ",
+    "Asmaa" : "Dr.Asmaa Zayed",
+    "laila" : "Dr.laila Al-Sharqawi",
+    "dermatologist":"Dermatologist" , 
+    "review":"Review",
+    "doctots" : "Doctors" ,
+    "search" :  "Search",
+    "home": "Home",
+    "chat": "Chat",
+    "account": "Account",
+    "chatroom": "Chat Room",
+    "language": "english",
+    "sign_in": "Sign in",
+    "email":"E-mail",
+    "Password":"Password",
+    "ForgerPassword": "Forger Password ?",
+    "sign_in_with":"Sign in with",
+    "Dont_have_an_account":"Dont have an account?",
+    "sign_up":"Sign Up",
+    "Username":"Username",
+    "Phone":"Phone",
+    "do_you_have_an_account":"Do you have an account"
+
+
+    
+    
+}
