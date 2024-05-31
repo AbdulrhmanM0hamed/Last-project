@@ -1,5 +1,6 @@
 import 'package:doctor_app/Services/doctor_content.dart';
 import 'package:doctor_app/Services/pharmacy.dart';
+import 'package:doctor_app/Services/report.dart';
 import 'package:doctor_app/Services/searchAi_page.dart';
 import 'package:doctor_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +38,13 @@ List<Services> servicesList(BuildContext context) => [
         image: 'assets/icons/noun-medical-test.svg',
         color: const Color(0xffD6F6FF),
         title: S.of(context).report,
-        content: (BuildContext context) => DoctorContent(),
+        content: (BuildContext context) => PrescriptionPage(
+          patientName: 'Abdulrhman Mohamed Shabaan',
+          additionalNotes: "He suffers from pimples on the skin",
+          beforeAfterMeal: "Before breakfast and lunch",
+          treatmentName: "1. La Roche-Posay Effaclar Duo Cream",
+          treatmentTime: "morning and evening",
+        ),
       ),
       Services(
         image: 'assets/icons/noun-corona.svg',

@@ -47,6 +47,26 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         BoxDecoration(borderRadius: BorderRadius.circular(20)),
                     child: Image.asset("assets/images/logo.jpeg"),
                   ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "DERMA",
+                        style: TextStyle(
+                            fontSize: 26,
+                            color: Colors.blue,
+                            fontWeight: FontWeight.w800),
+                      ),
+                      Text("  AI DX",
+                          style: TextStyle(
+                              fontSize: 26,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w800))
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
                   Text(
                     S.of(context).sign_up,
                     style: TextStyle(

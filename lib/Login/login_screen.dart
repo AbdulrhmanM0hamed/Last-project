@@ -21,7 +21,26 @@ class LoginScreen extends StatelessWidget {
                       height: 170,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20)),
-                      child: Image.asset("assets/images/logo.jpeg"),
+                      child: Image.asset(
+                        "assets/images/logo.jpeg",
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "DERMA",
+                          style: TextStyle(
+                              fontSize: 26,
+                              color: Colors.blue,
+                              fontWeight: FontWeight.w800),
+                        ),
+                        Text("  AI DX",
+                            style: TextStyle(
+                                fontSize: 26,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w800))
+                      ],
                     ),
                     const SizedBox(
                       height: 20,

@@ -154,6 +154,9 @@ class _AiScanningState extends State<AiScanning> {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       body: SafeArea(
         child: Stack(
@@ -175,7 +178,8 @@ class _AiScanningState extends State<AiScanning> {
                       Text(
                         "AI Scanning",
                         style: TextStyle(
-                            fontSize: 32, fontWeight: FontWeight.bold),
+                            fontSize: screenWidth * 0.08,
+                            fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -183,16 +187,16 @@ class _AiScanningState extends State<AiScanning> {
                 SizedBox(height: 20),
                 Expanded(
                   child: Center(
-                    child: Stack(
-                      alignment: Alignment.center,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         GestureDetector(
                           onTap: _isLoading ? null : _getImageFromGallery,
                           child: Container(
-                            width: 300,
-                            height: 300,
+                            width: screenWidth * 0.8,
+                            height: screenWidth * 0.8,
                             decoration: BoxDecoration(
-                              color: Colors.grey[200],
+                              color: Colors.grey[250],
                               border: Border.all(color: Colors.grey),
                               borderRadius: BorderRadius.circular(16),
                             ),
@@ -201,25 +205,26 @@ class _AiScanningState extends State<AiScanning> {
                                 : (_image != null
                                     ? Image.file(_image!, fit: BoxFit.cover)
                                     : Icon(Icons.image,
-                                        size: 100, color: Colors.grey)),
+                                        size: screenWidth * 0.25,
+                                        color: Colors.grey)),
                           ),
                         ),
+                        SizedBox(height: 20),
                         if (_topDisease != null && _topProbability != null)
-                          Padding(
-                            padding: const EdgeInsets.only(top: 300),
-                            child: Container(
-                              padding: EdgeInsets.all(16),
-                              decoration: BoxDecoration(
-                                color: Colors.grey[200],
-                                borderRadius: BorderRadius.circular(8),
+                          Container(
+                            width: screenWidth * 0.8,
+                            padding: EdgeInsets.all(16),
+                            decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 82, 158, 245),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: Text(
+                              'Top Disease: $_topDisease\nProbability: ${(_topProbability! * 100).toStringAsFixed(2)}%',
+                              style: TextStyle(
+                                fontSize: screenWidth * 0.05,
+                                fontWeight: FontWeight.bold,
                               ),
-                              child: Text(
-                                'Top Disease: $_topDisease\nProbability: ${(_topProbability! * 100).toStringAsFixed(2)}%',
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                              textAlign: TextAlign.center,
                             ),
                           ),
                       ],
@@ -228,19 +233,25 @@ class _AiScanningState extends State<AiScanning> {
                 ),
                 Center(
                   child: Padding(
-                    padding: EdgeInsets.all(100),
+                    padding: EdgeInsets.all(40),
                     child: ElevatedButton(
                       onPressed: _isLoading ? null : _getImageFromGallery,
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Color.fromARGB(255, 69, 142, 231),
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 40, vertical: 12),
+                        padding: EdgeInsets.symmetric(
+                            horizontal: screenWidth * 0.1,
+                            vertical: screenHeight * 0.02),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(16),
                         ),
                       ),
-                      child:
-                          Text('Select Image', style: TextStyle(fontSize: 20)),
+                      child: Text(
+                        'Select Image',
+                        style: TextStyle(
+                            fontSize: screenWidth * 0.05,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600),
+                      ),
                     ),
                   ),
                 ),

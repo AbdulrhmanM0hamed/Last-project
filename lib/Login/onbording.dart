@@ -25,8 +25,8 @@ class _OnBoardingViewState extends State<OnBoardingView> {
           "assets/images/doctor-and-rx-clipart-cartoon-style-doctor-gives-the-rx-medical-prescription-clipboard-with-mecidines-flat-illustration-bottle-pills-tablet-capsule-hospital-medical-pharmacy-concept-vector.jpg",
     },
     {
-      "subtitle": "Best Medicine Reminder",
-      "image": "assets/images/medicine-reminder-6557348-5444193.png",
+      "subtitle": "Dermatological examination using AI",
+      "image": "assets/images/documentation (2).png",
     }
   ];
 
